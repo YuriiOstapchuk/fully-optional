@@ -14,3 +14,5 @@ export function withDefault<T, R>(
 export function withDefault(...args: any) {
   return curryLast(_withDefault, args);
 }
+
+export default withDefault;

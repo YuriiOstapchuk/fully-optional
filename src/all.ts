@@ -50,3 +50,5 @@ export function all<T, R>(
 export function all(...args: any) {
   return curryLast(_all, args);
 }
+
+export default all;

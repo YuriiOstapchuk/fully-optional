@@ -17,3 +17,5 @@ export function bind<T, R>(
 export function bind(...args: any) {
   return curryLast(_bind, args);
 }
+
+export default bind;

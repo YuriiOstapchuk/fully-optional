@@ -23,3 +23,5 @@ export function withDefaultLazy<T, R>(
 export function withDefaultLazy(...args: any) {
   return curryLast(_withDefaultLazy, args);
 }
+
+export default withDefaultLazy;
