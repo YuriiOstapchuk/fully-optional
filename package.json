@@ -1,6 +1,6 @@
 {
   "name": "fully-optional",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "sideEffects": false,
   "repository": "git@github.com:YuriiOstapchuk/fully-optional.git",
