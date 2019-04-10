@@ -1,9 +1,9 @@
 {
-  "name": "maybe-not",
+  "name": "fully-optional",
   "version": "0.0.3",
   "main": "dist/index.js",
   "sideEffects": false,
-  "repository": "git@github.com:YuriiOstapchuk/maybe-not.git",
+  "repository": "git@github.com:YuriiOstapchuk/fully-optional.git",
   "author": "Yurii Ostapchuk <y.ostapchuk1@gmail.com>",
   "license": "MIT",
   "keywords": [
