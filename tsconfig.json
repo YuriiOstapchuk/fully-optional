@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["es2017"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "stripInternal": true,
+
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "removeComments": true
+  },
+  "exclude": ["node_modules", "dist"]
+}

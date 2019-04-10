@@ -1,0 +1,6 @@
+*
+!src/*.ts
+src/*.test.ts
+!dist/*
+!LICENSE
+!README.md

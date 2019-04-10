@@ -1,0 +1,41 @@
+{
+  "name": "maybe-not",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:YuriiOstapchuk/maybe-not.git",
+  "author": "Yurii Ostapchuk <y.ostapchuk1@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "clean": "rm -rf dist",
+    "compile": "tsc -p .",
+    "prebuild": "npm run clean",
+    "build": "npm run compile",
+    "check-compilation": "npm run compile -- --noEmit",
+    "precommit": "npm run check-compilation && lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "husky": "^1.3.1",
+    "jest": "^24.7.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.2"
+  }
+}
