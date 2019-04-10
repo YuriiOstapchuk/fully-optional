@@ -1,10 +1,21 @@
 {
   "name": "maybe-not",
-  "version": "0.0.2",
-  "main": "index.js",
+  "version": "0.0.3",
+  "main": "dist/index.js",
+  "sideEffects": false,
   "repository": "git@github.com:YuriiOstapchuk/maybe-not.git",
   "author": "Yurii Ostapchuk <y.ostapchuk1@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "maybe",
+    "option",
+    "null",
+    "null-safe",
+    "utils",
+    "fp",
+    "functional",
+    "typescript"
+  ],
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
