@@ -1,4 +1,4 @@
-import match from './match';
+import { match } from '.';
 
 describe('match', () => {
   const someFn = jest.fn((s: string) => s.toUpperCase());

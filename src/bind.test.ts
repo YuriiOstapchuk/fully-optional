@@ -1,4 +1,5 @@
-import { bind } from './bind';
+import { pipe } from 'remeda';
+import { bind } from '.';
 
 describe('bind', () => {
   const fn = jest.fn((s: string) => s.toUpperCase());
@@ -23,7 +24,13 @@ describe('bind', () => {
   });
 
   it('can be called data last', () => {
-    const result = bind(fn)(str);
+    const data: { test?: string } | undefined = { test: str };
+
+    const result = pipe(
+      data,
+      bind(e => e.test),
+      bind(fn),
+    );
 
     expect(fn.mock.calls[0][0]).toBe(str);
     expect(result).toBe(fn(str));

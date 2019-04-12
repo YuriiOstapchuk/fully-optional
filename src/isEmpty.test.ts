@@ -1,4 +1,4 @@
-import isEmpty from './isEmpty';
+import { isEmpty } from '.';
 
 describe('isEmpty', () => {
   it('should check if value is null or undefined', () => {
