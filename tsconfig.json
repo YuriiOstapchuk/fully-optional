@@ -10,7 +10,7 @@
     "esModuleInterop": true,
 
     "declaration": true,
-    "declarationMap": false,
+    "declarationMap": true,
     "sourceMap": false,
     "importHelpers": true,
     "noEmitHelpers": true,
