@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - '11'
+before_install:
+  - npm install -g codecov
+script:
+  - yarn test --coverage
+after_success:
+  - codecov
