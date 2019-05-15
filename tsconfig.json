@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist",
+    "outDir": "./dist/es",
 
     "target": "es5",
     "module": "esnext",
