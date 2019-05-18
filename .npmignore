@@ -2,6 +2,8 @@
 !src/*.ts
 src/*.test.ts
 !dist/**/*.js
+!dist/**/*.d.ts
 dist/**/*.test.js
+dist/**/*.test.d.ts
 !LICENSE
 !README.md
