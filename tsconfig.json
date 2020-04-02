@@ -12,8 +12,6 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": false,
-    "importHelpers": true,
-    "noEmitHelpers": true,
     "noEmitOnError": true,
     "stripInternal": true,
 

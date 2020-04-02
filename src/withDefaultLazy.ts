@@ -7,7 +7,7 @@ const _withDefaultLazy = <T, R>(
   defaultValueFn: () => R,
 ): T | R =>
   match(value, {
-    some: _ => _,
+    some: (_) => _,
     none: defaultValueFn,
   });
 

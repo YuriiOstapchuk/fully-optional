@@ -17,8 +17,8 @@ describe('match', () => {
       none: noneFn,
     });
 
-    expect(someFn.mock.calls[0][0]).toBe(str);
-    expect(noneFn.mock.calls.length).toBe(0);
+    expect(someFn).toHaveBeenCalledWith(str);
+    expect(noneFn).not.toHaveBeenCalled();
     expect(result).toBe(someFn(str));
   });
 
@@ -30,8 +30,8 @@ describe('match', () => {
       none: noneFn,
     });
 
-    expect(someFn.mock.calls.length).toBe(0);
-    expect(noneFn.mock.calls.length).toBe(1);
+    expect(someFn).not.toHaveBeenCalled();
+    expect(noneFn).toHaveBeenCalled();
     expect(result).toBe(noneFn());
   });
 
@@ -43,8 +43,8 @@ describe('match', () => {
       none: noneFn,
     })(str);
 
-    expect(someFn.mock.calls[0][0]).toBe(str);
-    expect(noneFn.mock.calls.length).toBe(0);
+    expect(someFn).toHaveBeenCalledWith(str);
+    expect(noneFn).not.toHaveBeenCalled();
     expect(result).toBe(someFn(str));
   });
 });

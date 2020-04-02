@@ -1,4 +1,4 @@
-import { pipe } from 'remeda';
+import { pipe } from 'fp-ts/lib/pipeable';
 import { withDefaultLazy } from '.';
 
 describe('withDefaultLazy', () => {
@@ -12,14 +12,14 @@ describe('withDefaultLazy', () => {
   it('should calculate lazy value on null', () => {
     const result = withDefaultLazy(undefined, defaultValueFn);
 
-    expect(defaultValueFn.mock.calls.length).toBe(1);
+    expect(defaultValueFn).toHaveBeenCalled();
     expect(result).toBe(defaultValueFn());
   });
 
   it('should return the value when it not null', () => {
     const result = withDefaultLazy(str, defaultValueFn);
 
-    expect(defaultValueFn.mock.calls.length).toBe(0);
+    expect(defaultValueFn).not.toHaveBeenCalled();
     expect(result).toBe(str);
   });
 

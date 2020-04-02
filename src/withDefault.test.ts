@@ -1,4 +1,4 @@
-import { pipe } from 'remeda';
+import { pipe } from 'fp-ts/lib/pipeable';
 import { withDefault } from '.';
 
 describe('withDefault', () => {
@@ -18,10 +18,7 @@ describe('withDefault', () => {
   });
 
   it('can be called data last', () => {
-    const result = pipe(
-      undefined,
-      withDefault(defaultValue),
-    );
+    const result = pipe(undefined, withDefault(defaultValue));
 
     expect(result).toBe(defaultValue);
   });

@@ -63,11 +63,11 @@ import { bind, withDefaultLazy } from 'fully-optional';
 
 const f = flow(
   getData,
-  bind(data => data.data),
-  bind(data => data.date),
+  bind((data) => data.data),
+  bind((data) => data.date),
   bind(parseDate),
   withDefaultLazy(() => new Date()),
-  date => date.toLocaleDateString(),
+  (date) => date.toLocaleDateString(),
 );
 ```
 
@@ -131,8 +131,8 @@ declare const f: (...args: any[]) => X | undefined;
 
 const r = flow(
   f,
-  bind(e => e.a),
-  bind(e => e.b),
+  bind((e) => e.a),
+  bind((e) => e.b),
   bind(parseInt),
 ); // inferred type number | undefined
 ```
@@ -156,7 +156,7 @@ _Apply a function to a value if it is not null or undefined_
 ```ts
 declare const a: string | undefined;
 
-bind(a, e => e.toUpperCase()); // string | undefined
+bind(a, (e) => e.toUpperCase()); // string | undefined
 ```
 
 #### `isEmpty`
@@ -183,7 +183,7 @@ _Give two functions to handle both empty and non empty cases_
 declare const a: string | undefined;
 
 match(a, {
-  some: e => e.toUpperCase(),
+  some: (e) => e.toUpperCase(),
   none: () => '',
 });
 ```
@@ -206,7 +206,7 @@ _Calculate and return default value if the argument is null or undefined_
 declare const a: string | undefined;
 declare const expensiveDefaultValue: () => string;
 
-withDefault(a, expensiveDefaultValue);
+withDefaultLazy(a, expensiveDefaultValue);
 ```
 
 ## Contributing
